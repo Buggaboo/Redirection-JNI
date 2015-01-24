@@ -18,7 +18,7 @@
 #include <jni.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <android/log.h>
+//#include <android/log.h>
 #include <fcntl.h>
 #include <stdio.h>
 
@@ -81,7 +81,7 @@ Java_com_manish_redirectionjni_RedirectionJni_stringFromJNI( JNIEnv* env,
 	char buf[256] = "";
 	fscanf(stdin, "%*s %99[^\n]", buf); // Use this format to read white spaces.
 	close(fdi);
-	__android_log_write(ANDROID_LOG_ERROR, "Redirection1", buf);
+//	__android_log_write(ANDROID_LOG_ERROR, "Redirection1", buf);
 
 	env->ReleaseStringUTFChars(jOutfile, outfile);
 	env->ReleaseStringUTFChars(jInfile, infile);
