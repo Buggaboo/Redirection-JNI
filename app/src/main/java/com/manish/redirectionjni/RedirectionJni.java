@@ -76,7 +76,7 @@ public class RedirectionJni extends Activity
         }).start();
 
 
-        TextView textView = (TextView) findViewById(R.id.textView);
+        final TextView textView = (TextView) findViewById(R.id.textView);
         textView.setHint("Tap to read stdio");
 
         mEditText = (EditText) findViewById(R.id.editText);
@@ -105,6 +105,7 @@ public class RedirectionJni extends Activity
                                     public void run() {
                                         // TODO Auto-generated method stub
                                         Toast.makeText(RedirectionJni.this, str, Toast.LENGTH_LONG).show();
+                                        textView.setText(str);
                                     }
 
                                 });
