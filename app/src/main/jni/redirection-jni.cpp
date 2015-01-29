@@ -69,6 +69,8 @@ Java_com_manish_redirectionjni_RedirectionJni_stringFromJNI( JNIEnv* env,
 	fflush(stdout);
 	close(fdo);
 
+	puts("This too."); // yes!
+
 	/*
 	 * Step 1: Make a named pipe
 	 * Step 2: Open the pipe in Read only mode. Java code will open it in Write only mode.
